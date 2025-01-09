@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Invierte en Coca-Cola</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <title>Acciones COCA-COLA</title>
+  
+  <!-- Tipografía elegante -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.0/dist/chart.min.js"></script>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
+      font-family: 'Roboto', sans-serif;
       background: #f4f4f9;
       color: #333;
       text-align: center;
@@ -18,24 +18,38 @@
     header {
       background: #ff0000;
       color: #fff;
-      padding: 1.5rem;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+      padding: 3rem 1rem;
+      position: relative;
     }
     header h1 {
-      margin: 0;
-      font-size: 2.5rem;
+      font-size: 2rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      margin-bottom: 1rem;
     }
     header p {
-      margin: 0.5rem 0 1rem;
       font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    header img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      margin-bottom: 1rem;
     }
     .container {
       margin: 2rem auto;
       max-width: 900px;
-      padding: 1.5rem;
+      padding: 1rem;
       background: #fff;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       border-radius: 8px;
+    }
+    .price {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #ff0000;
+      margin: 1rem 0;
     }
     .chart-container {
       margin: 2rem 0;
@@ -44,4 +58,212 @@
       margin: 2rem 0;
     }
     .cta button {
-      background
+      background: #0070ba;
+      color: #fff;
+      border: none;
+      padding: 15px 30px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1.2rem;
+      transition: background 0.3s ease;
+    }
+    .cta button:hover {
+      background: #005c99;
+    }
+    .contact {
+      margin-top: 2rem;
+      font-size: 1.2rem;
+      color: #333;
+    }
+    .contact a {
+      color: #0070ba;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .contact a:hover {
+      text-decoration: underline;
+    }
+    .opinions {
+      margin-top: 2rem;
+      text-align: left;
+      background: #f9f9f9;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .opinion {
+      margin-bottom: 1rem;
+      font-size: 1rem;
+      color: #555;
+    }
+    .opinion strong {
+      display: block;
+      font-size: 1.1rem;
+      color: #333;
+    }
+    .opinion span {
+      font-size: 0.9rem;
+      color: #888;
+    }
+    .how-it-works {
+      background: #f8f8f8;
+      padding: 2rem;
+      margin-top: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .how-it-works h3 {
+      font-size: 1.8rem;
+      color: #333;
+      margin-bottom: 1rem;
+    }
+    .how-it-works p {
+      font-size: 1.1rem;
+      color: #555;
+      margin-bottom: 1.5rem;
+    }
+    .how-it-works .highlight {
+      color: #ff0000;
+      font-weight: bold;
+    }
+    .generated {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      color: #ff4500;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://imgur.com/52lPuGb.png" alt="COCA-COLA Imagen Principal">
+    <h1>Invierte en COCA-COLA y Sé Parte del Éxito</h1>
+    <p>Una oportunidad única para asegurar tu futuro financiero</p>
+  </header>
+
+  <div class="container">
+    <!-- Precio de la inversión -->
+    <div class="price">Precio de la inversión: $9.99</div>
+
+    <!-- Gráfica interactiva -->
+    <div class="chart-container">
+      <canvas id="stockChart"></canvas>
+    </div>
+
+    <!-- Explicación de la inversión -->
+    <div class="how-it-works">
+      <h3>¿Cómo Funciona la Inversión?</h3>
+      <p>
+        Al invertir solo <span class="highlight">$9.99</span> en acciones de COCA-COLA, obtendrás rendimientos al 
+        largo del tiempo gracias a la histórica estabilidad y crecimiento de la compañía. Pero eso no es todo...
+      </p>
+      <p>
+        Si invitas a un amigo a unirse a esta increíble oportunidad, recibirás <span class="highlight">la mitad de la inversión</span> que tu amigo haga. ¡Así, no solo estás asegurando tu futuro, sino también generando ingresos adicionales al ayudar a otros a invertir!
+      </p>
+      <p>
+        La inversión de COCA-COLA siempre ha demostrado ser confiable, ¡y con esta oportunidad, tú también puedes 
+        formar parte de la historia de éxito de esta gran marca!
+      </p>
+    </div>
+
+    <!-- Generación de ganancias -->
+    <div class="generated" id="generatedAmount">Total generado: $0.00</div>
+
+    <!-- Opiniones -->
+    <div class="opinions">
+      <h2>Opiniones de nuestros inversores</h2>
+      <div class="opinion">
+        <strong>María López</strong>
+        <span>01/2025</span>
+        <p>"Invertir en COCA-COLA ha sido la mejor decisión de mi vida. ¡Mis ahorros han crecido enormemente!"</p>
+      </div>
+      <div class="opinion">
+        <strong>Carlos Pérez</strong>
+        <span>01/2025</span>
+        <p>"Estoy impresionado con los resultados. COCA-COLA siempre es una apuesta segura."</p>
+      </div>
+      <div class="opinion">
+        <strong>Lucía Fernández</strong>
+        <span>01/2025</span>
+        <p>"Gracias a esta inversión, he podido planificar mi retiro con confianza. ¡Recomendado 100%!"</p>
+      </div>
+    </div>
+
+    <!-- Botón de acción -->
+    <div class="cta">
+      <p><strong>¿Estás listo para unirte al crecimiento de COCA-COLA?</strong></p>
+      <button onclick="invest()">Invertir Ahora</button>
+    </div>
+
+    <!-- Contacto del agente de ventas -->
+    <div class="contact">
+      <p>¿Tienes dudas? Contacta a nuestro agente de ventas:</p>
+      <a href="https://t.me/+sIOLz-THymo4ZWRh" target="_blank">Hablar con el agente en Telegram</a>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const ctx = document.getElementById('stockChart').getContext('2d');
+      const investment = 9.99; // Inversión inicial
+
+      const stockData = {
+        labels: ['10:00', '10:05', '10:10', '10:15', '10:20'],
+        datasets: [{
+          label: 'Precio de Acciones ($)',
+          data: [62.5, 62.8, 63.0, 62.9, 63.2],
+          borderColor: 'rgba(255, 0, 0, 0.8)',
+          backgroundColor: 'rgba(255, 0, 0, 0.1)',
+          fill: true,
+          tension: 0.3
+        }]
+      };
+
+      const config = {
+        type: 'line',
+        data: stockData,
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              display: true,
+              position: 'top',
+            },
+          },
+          scales: {
+            y: {
+              beginAtZero: false
+            }
+          }
+        }
+      };
+
+      const stockChart = new Chart(ctx, config);
+
+      // Función para actualizar el total generado
+      function updateGeneratedAmount(price) {
+        const generated = (price * investment / 62.5).toFixed(2); // Estimación del beneficio
+        document.getElementById('generatedAmount').textContent = `Total generado: $${generated}`;
+      }
+
+      setInterval(() => {
+        const currentTime = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+        const lastPrice = parseFloat(stockData.datasets[0].data.slice(-1)[0]);
+
+        stockData.labels.push(currentTime);
+        stockData.datasets[0].data.push((lastPrice + (Math.random() - 0.5) * 0.2).toFixed(2));
+
+        if (stockData.labels.length > 10) {
+          stockData.labels.shift();
+          stockData.datasets[0].data.shift();
+        }
+
+        // Actualizar la gráfica
+        stockChart.update();
+
+        // Actualizar el total generado
+        updateGeneratedAmount(parseFloat(stockData.datasets[0].data.slice(-1)[0]));
+      }, 5000);
+    });
+  </script>
+</body>
+</html>
