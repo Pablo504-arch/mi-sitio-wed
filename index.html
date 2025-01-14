@@ -1,292 +1,242 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Acciones COCA-COLA</title>
-  
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.0/dist/chart.min.js"></script>
-  <style>
-    body {
-      font-family: 'Roboto', sans-serif;
-      background: #f4f4f9;
-      color: #333;
-      text-align: center;
-      background-image: linear-gradient(135deg, rgba(255, 0, 0, 0.1), rgba(255, 0, 0, 0.05)); /* Mensaje subliminal con el color rojo */
-    }
-    header {
-      background: #ff0000;
-      color: #fff;
-      padding: 3rem 1rem;
-      position: relative;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-    header h1 {
-      font-size: 2rem;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-      margin-bottom: 1rem;
-    }
-    header p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-      opacity: 0.8;
-    }
-    header img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-      margin-bottom: 1rem;
-    }
-    .container {
-      margin: 2rem auto;
-      max-width: 900px;
-      padding: 1rem;
-      background: #fff;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
-    }
-    .price {
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: #ff0000;
-      margin: 1rem 0;
-    }
-    .chart-container {
-      margin: 2rem 0;
-    }
-    .cta {
-      margin: 2rem 0;
-    }
-    .cta button {
-      background: #0070ba;
-      color: #fff;
-      border: none;
-      padding: 15px 30px;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 1.2rem;
-      transition: background 0.3s ease;
-    }
-    .cta button:hover {
-      background: #005c99;
-    }
-    .cta p {
-      font-size: 1.2rem;
-      color: #ff4500; /* Color llamativo */
-      font-weight: bold;
-      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-    }
-    .contact {
-      margin-top: 2rem;
-      font-size: 1.2rem;
-      color: #333;
-    }
-    .contact a {
-      color: #0070ba;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .contact a:hover {
-      text-decoration: underline;
-    }
-    .how-it-works {
-      background: #f8f8f8;
-      padding: 2rem;
-      margin-top: 2rem;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-    .how-it-works h3 {
-      font-size: 1.8rem;
-      color: #333;
-      margin-bottom: 1rem;
-    }
-    .how-it-works p {
-      font-size: 1.1rem;
-      color: #555;
-      margin-bottom: 1.5rem;
-    }
-    .how-it-works .highlight {
-      color: #ff0000;
-      font-weight: bold;
-    }
-    .generated {
-      margin-top: 1rem;
-      font-size: 1.2rem;
-      color: #ff4500;
-    }
-    /* Mensaje subliminal en el fondo */
-    .subliminal-text {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      font-size: 0.9rem;
-      color: rgba(255, 0, 0, 0.3);
-      text-align: center;
-      opacity: 0.5;
-      padding: 1rem 0;
-      font-weight: bold;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      display: block;
-      z-index: -1;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gana Dinero Desde Casa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            position: relative;
+        }
+        .header {
+            background-color: #ff9800;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 2rem;
+            font-weight: bold;
+            position: relative;
+        }
+        .header::after {
+            content: "¡Hazlo ahora, tu futuro te lo agradecerá!";
+            font-size: 1rem;
+            color: #ff5722;
+            position: absolute;
+            top: 90%;
+            width: 100%;
+            text-align: center;
+            font-weight: lighter;
+        }
+        .main-content {
+            padding: 40px;
+            text-align: center;
+        }
+        .cta-button {
+            background-color: #ff5722;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.5rem;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+        .cta-button:hover {
+            background-color: #e64a19;
+        }
+        .cta-button::after {
+            content: "Invierte en tu futuro";
+            font-size: 0.9rem;
+            color: #fff;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-weight: bold;
+            opacity: 0.8;
+        }
+        .testimonials {
+            background-color: #e0f7fa;
+            padding: 40px;
+            margin-top: 40px;
+        }
+        .testimonial {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #00796b;
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .testimonial img {
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            margin-right: 20px;
+        }
+        .urgent {
+            background-color: #ffeb3b;
+            padding: 10px;
+            font-size: 1.5rem;
+            color: red;
+            font-weight: bold;
+        }
+        .urgent::before {
+            content: "Hazlo ahora o perderás esta oportunidad";
+            display: block;
+            font-size: 1rem;
+            font-weight: normal;
+            color: #d32f2f;
+        }
+        .countdown {
+            font-size: 2rem;
+            color: #d32f2f;
+            font-weight: bold;
+        }
+        .membership {
+            background-color: #81c784;
+            color: white;
+            padding: 30px;
+            margin-top: 40px;
+        }
+        .membership p {
+            font-size: 1.2rem;
+        }
+        .membership p::after {
+            content: "El primer paso es el más importante.";
+            font-size: 1rem;
+            font-style: italic;
+            color: #fff;
+            margin-top: 15px;
+        }
+        .footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .image-container img {
+            width: 80%;
+            max-width: 600px;
+            margin-top: 30px;
+        }
+        /* Mensajes subliminales de fondo */
+        body::before {
+            content: "No pierdas tu oportunidad, el éxito te espera.";
+            position: absolute;
+            top: 15%;
+            left: 10%;
+            transform: rotate(-45deg);
+            font-size: 3rem;
+            color: rgba(0, 0, 0, 0.1);
+            font-weight: bold;
+            pointer-events: none;
+            z-index: -1;
+        }
+        body::after {
+            content: "Invierte ahora y transforma tu futuro financiero.";
+            position: absolute;
+            top: 30%;
+            left: 20%;
+            transform: rotate(45deg);
+            font-size: 3rem;
+            color: rgba(0, 0, 0, 0.1);
+            font-weight: bold;
+            pointer-events: none;
+            z-index: -1;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <img src="https://imgur.com/52lPuGb.png" alt="COCA-COLA Imagen Principal">
-    <h1>Invierte en COCA-COLA y Sé Parte del Éxito</h1>
-    <p>Una oportunidad única para asegurar tu futuro financiero</p>
-  </header>
 
-  <div class="container">
-    <!-- Precio de la inversión -->
-    <div class="price">Precio de la inversión: $9.99</div>
-
-    <!-- Gráfica interactiva -->
-    <div class="chart-container">
-      <canvas id="stockChart"></canvas>
+    <div class="header">
+        ¡Gana hasta $1,000 al día desde la comodidad de tu hogar!
     </div>
 
-    <!-- Explicación de la inversión -->
-    <div class="how-it-works">
-      <h3>¿Cómo Funciona la Inversión?</h3>
-      <p>
-        Al invertir solo <span class="highlight">$9.99</span> en acciones de COCA-COLA, obtendrás rendimientos al 
-        largo del tiempo gracias a la histórica estabilidad y crecimiento de la compañía. Pero eso no es todo...
-      </p>
-      <p>
-        Si invitas a un amigo a unirse a esta increíble oportunidad, recibirás <span class="highlight">la mitad de la inversión</span> que tu amigo haga. ¡Así, no solo estás asegurando tu futuro, sino también generando ingresos adicionales al ayudar a otros a invertir!
-      </p>
-      <p>
-        La inversión de COCA-COLA siempre ha demostrado ser confiable, ¡y con esta oportunidad, tú también puedes 
-        formar parte de la historia de éxito de esta gran marca!
-      </p>
+    <div class="main-content">
+        <h1>Genera ingresos pasivos y trabaja desde casa</h1>
+        <p>Únete a nuestro exclusivo programa de membresía y comienza a ganar dinero hoy mismo.</p>
+        <a href="https://www.paypal.me/PAnahin" target="_blank">
+            <button class="cta-button">¡Únete ahora y comienza a ganar dinero!</button>
+        </a>
     </div>
 
-    <!-- Generación de ganancias -->
-    <div class="generated" id="generatedAmount">Total generado: $0.00</div>
-
-    <!-- Opiniones -->
-    <div class="opinions">
-      <h2>Opiniones de nuestros inversores</h2>
-      <div class="opinion">
-        <strong>María López</strong>
-        <span>01/2025</span>
-        <p>"Invertir en COCA-COLA ha sido la mejor decisión de mi vida. ¡Mis ahorros han crecido enormemente!"</p>
-      </div>
-      <div class="opinion">
-        <strong>Carlos Pérez</strong>
-        <span>01/2025</span>
-        <p>"Estoy impresionado con los resultados. COCA-COLA siempre es una apuesta segura."</p>
-      </div>
-      <div class="opinion">
-        <strong>Lucía Fernández</strong>
-        <span>01/2025</span>
-        <p>"Gracias a esta inversión, he podido planificar mi retiro con confianza. ¡Recomendado 100%!"</p>
-      </div>
-    </div>
-<form action="https://formspree.io/f/mzzzyzal" method="POST">
-  <label for="name">Nombre:</label>
-  <input type="text" id="name" name="name" required>
-
-  <label for="email">Correo electrónico:</label>
-  <input type="email" id="email" name="email" required>
-
-  <label for="phone">Número de teléfono (Telegram):</label>
-  <input type="text" id="phone" name="phone" required>
-
-  <label for="message">Mensaje:</label>
-  <textarea id="message" name="message" required></textarea>
-
-  <button type="submit">Enviar</button>
-</form>
-    <!-- Botón de acción -->
-    <div class="cta">
-      <p><strong>¿Estás listo para unirte al crecimiento de COCA-COLA?</strong></p>
-      <button onclick="window.open('https://www.paypal.me/PAnahin', '_blank')">Invertir Ahora</button>
+    <div class="urgent">
+        <p>¡Solo quedan 50 plazas disponibles!</p>
+        <div id="countdown" class="countdown">00:10:00</div>
     </div>
 
-    <!-- Contacto del agente de ventas -->
-    <div class="contact">
-      <p>¿Tienes dudas? Contacta a nuestro agente de ventas:</p>
-      <a href="https://t.me/+sIOLz-THymo4ZWRh" target="_blank">Hablar con el agente en Telegram</a>
+    <div class="testimonials">
+        <h2>Testimonios de Usuarios Satisfechos</h2>
+        
+        <!-- Testimonio 1 -->
+        <div class="testimonial">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Juan P.">
+            <div>
+                <p>"¡En solo 3 días gané $500! Este programa realmente funciona." - Juan P.</p>
+            </div>
+        </div>
+        
+        <!-- Testimonio 2 -->
+        <div class="testimonial">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Marta G.">
+            <div>
+                <p>"Me uní hace una semana y ya tengo ingresos pasivos. ¡Increíble!" - Marta G.</p>
+            </div>
+        </div>
+        
+        <!-- Testimonio 3 -->
+        <div class="testimonial">
+            <img src="https://randomuser.me/api/portraits/men/24.jpg" alt="Carlos T.">
+            <div>
+                <p>"Nunca imaginé que ganar dinero desde casa podría ser tan fácil." - Carlos T.</p>
+            </div>
+        </div>
     </div>
-  </div>
 
-  <!-- Mensajes subliminales en el fondo -->
-  <div class="subliminal-text">
-    <p>¡Invierte ahora y comienza a generar ingresos hoy mismo con Coca-Cola!</p>
-    <p>¡Las acciones de Coca-Cola están en alza! Aprovecha esta oportunidad antes que sea tarde.</p>
-  </div>
+    <div class="membership">
+        <h2>Programa de Membresía Exclusiva</h2>
+        <p>Únete por solo $10 y empieza a generar ingresos pasivos vendiendo cursos educativos y herramientas para emprendedores.</p>
+        <p>Recuerda: ¡lo principal es invitar a más personas a unirse! Cada persona que reclutes paga $10, y tú recibirás una parte de ese pago.</p>
+        <p>Cuantas más personas reclutes, más comisiones ganarás y ¡subirás de nivel para recibir mayores ganancias!</p>
+        <a href="https://www.paypal.me/PAnahin" target="_blank">
+            <button class="cta-button">Únete Ahora por Solo $10</button>
+        </a>
+    </div>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      const ctx = document.getElementById('stockChart').getContext('2d');
-      const investment = 9.99; // Inversión inicial
+    <div class="image-container">
+        <img src="https://images.pexels.com/photos/3183152/pexels-photo-3183152.jpeg" alt="Persona trabajando en la playa con su laptop">
+    </div>
 
-      const stockData = {
-        labels: ['10:00', '10:05', '10:10', '10:15', '10:20'],
-        datasets: [{
-          label: 'Precio de Acciones ($)',
-          data: [62.5, 62.8, 63.0, 62.9, 63.2],
-          borderColor: 'rgba(255, 0, 0, 0.8)',
-          backgroundColor: 'rgba(255, 0, 0, 0.1)',
-          fill: true,
-          tension: 0.3
-        }]
-      };
+    <div class="footer">
+        <p>¡No dejes pasar esta oportunidad única! Únete ahora y comienza a ganar dinero desde casa.</p>
+    </div>
 
-      const config = {
-        type: 'line',
-        data: stockData,
-        options: {
-          responsive: true,
-          plugins: {
-            legend: {
-              display: true,
-              position: 'top',
-            },
-          },
-          scales: {
-            y: {
-              beginAtZero: false
+    <script>
+        // Temporizador de cuenta regresiva
+        var countdownDate = new Date().getTime() + 600000; // 10 minutos
+
+        var x = setInterval(function() {
+            var now = new Date().getTime();
+            var distance = countdownDate - now;
+
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("countdown").innerHTML = hours + ":" + minutes + ":" + seconds;
+
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "¡El tiempo ha expirado!";
             }
-          }
-        }
-      };
+        }, 1000);
+    </script>
 
-      const stockChart = new Chart(ctx, config);
-
-      // Función para actualizar el total generado
-      function updateGeneratedAmount(price) {
-        const generated = (price * investment / 62.5).toFixed(2); // Estimación del beneficio
-        document.getElementById('generatedAmount').textContent = `Total generado: $${generated}`;
-      }
-
-      setInterval(() => {
-        const currentTime = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-        const lastPrice = parseFloat(stockData.datasets[0].data.slice(-1)[0]);
-
-        stockData.labels.push(currentTime);
-        stockData.datasets[0].data.push((lastPrice + (Math.random() - 0.5) * 0.2).toFixed(2));
-
-        if (stockData.labels.length > 10) {
-          stockData.labels.shift();
-          stockData.datasets[0].data.shift();
-        }
-
-        // Actualizar la gráfica
-        stockChart.update();
-
-        // Actualizar el total generado
-        updateGeneratedAmount(parseFloat(stockData.datasets[0].data.slice(-1)[0]));
-      }, 5000);
-    });
-  </script>
 </body>
-        </html>
+</html>
