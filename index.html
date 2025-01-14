@@ -49,17 +49,6 @@
         .cta-button:hover {
             background-color: #e64a19;
         }
-        .cta-button::after {
-            content: "Invierte en tu futuro";
-            font-size: 0.9rem;
-            color: #fff;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-weight: bold;
-            opacity: 0.8;
-        }
         .testimonials {
             background-color: #e0f7fa;
             padding: 40px;
@@ -71,7 +60,6 @@
             color: #00796b;
             display: flex;
             align-items: center;
-            margin-bottom: 30px;
         }
         .testimonial img {
             border-radius: 50%;
@@ -86,13 +74,6 @@
             color: red;
             font-weight: bold;
         }
-        .urgent::before {
-            content: "Hazlo ahora o perderás esta oportunidad";
-            display: block;
-            font-size: 1rem;
-            font-weight: normal;
-            color: #d32f2f;
-        }
         .countdown {
             font-size: 2rem;
             color: #d32f2f;
@@ -103,16 +84,6 @@
             color: white;
             padding: 30px;
             margin-top: 40px;
-        }
-        .membership p {
-            font-size: 1.2rem;
-        }
-        .membership p::after {
-            content: "El primer paso es el más importante.";
-            font-size: 1rem;
-            font-style: italic;
-            color: #fff;
-            margin-top: 15px;
         }
         .footer {
             background-color: #2c3e50;
@@ -125,30 +96,45 @@
             max-width: 600px;
             margin-top: 30px;
         }
-        /* Mensajes subliminales de fondo */
-        body::before {
-            content: "No pierdas tu oportunidad, el éxito te espera.";
-            position: absolute;
-            top: 15%;
-            left: 10%;
-            transform: rotate(-45deg);
-            font-size: 3rem;
-            color: rgba(0, 0, 0, 0.1);
-            font-weight: bold;
-            pointer-events: none;
-            z-index: -1;
+        .form-container {
+            margin-top: 40px;
+            background-color: #f0f4c3;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
         }
-        body::after {
-            content: "Invierte ahora y transforma tu futuro financiero.";
-            position: absolute;
-            top: 30%;
-            left: 20%;
-            transform: rotate(45deg);
-            font-size: 3rem;
-            color: rgba(0, 0, 0, 0.1);
+        .form-container h2 {
+            color: #6d4c41;
+        }
+        .form-container form input,
+        .form-container form textarea,
+        .form-container form button {
+            width: 90%;
+            max-width: 400px;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        .form-container form button {
+            background-color: #4caf50;
+            color: white;
+            font-size: 1.2rem;
             font-weight: bold;
-            pointer-events: none;
-            z-index: -1;
+            cursor: pointer;
+        }
+        .form-container form button:hover {
+            background-color: #388e3c;
+        }
+        .telegram-contact {
+            margin-top: 20px;
+            font-size: 1.2rem;
+        }
+        .telegram-contact a {
+            color: #0077b5;
+            text-decoration: none;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -173,24 +159,18 @@
 
     <div class="testimonials">
         <h2>Testimonios de Usuarios Satisfechos</h2>
-        
-        <!-- Testimonio 1 -->
         <div class="testimonial">
             <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Juan P.">
             <div>
                 <p>"¡En solo 3 días gané $500! Este programa realmente funciona." - Juan P.</p>
             </div>
         </div>
-        
-        <!-- Testimonio 2 -->
         <div class="testimonial">
             <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Marta G.">
             <div>
                 <p>"Me uní hace una semana y ya tengo ingresos pasivos. ¡Increíble!" - Marta G.</p>
             </div>
         </div>
-        
-        <!-- Testimonio 3 -->
         <div class="testimonial">
             <img src="https://randomuser.me/api/portraits/men/24.jpg" alt="Carlos T.">
             <div>
@@ -209,6 +189,19 @@
         </a>
     </div>
 
+    <div class="form-container">
+        <h2>Contáctanos</h2>
+        <form action="https://formspree.io/f/mzzzyzal" method="POST">
+            <input type="text" name="nombre" placeholder="Tu Nombre" required>
+            <input type="email" name="email" placeholder="Tu Correo Electrónico" required>
+            <textarea name="mensaje" rows="4" placeholder="Tu Mensaje" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+        <div class="telegram-contact">
+            <p>O contáctanos en Telegram: <a href="https://t.me/+sIOLz-THymo4ZWRh" target="_blank">¡Únete aquí!</a></p>
+        </div>
+    </div>
+
     <div class="image-container">
         <img src="https://images.pexels.com/photos/3183152/pexels-photo-3183152.jpeg" alt="Persona trabajando en la playa con su laptop">
     </div>
@@ -218,19 +211,13 @@
     </div>
 
     <script>
-        // Temporizador de cuenta regresiva
-        var countdownDate = new Date().getTime() + 600000; // 10 minutos
-
+        var countdownDate = new Date().getTime() + 600000;
         var x = setInterval(function() {
             var now = new Date().getTime();
             var distance = countdownDate - now;
-
-            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            document.getElementById("countdown").innerHTML = hours + ":" + minutes + ":" + seconds;
-
+            document.getElementById("countdown").innerHTML = "00:" + minutes + ":" + seconds;
             if (distance < 0) {
                 clearInterval(x);
                 document.getElementById("countdown").innerHTML = "¡El tiempo ha expirado!";
